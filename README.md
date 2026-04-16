@@ -1,13 +1,13 @@
 # Pre-Commit Codex Review
 
-A [Claude Code](https://claude.ai/claude-code) skill that gates every code commit behind an automated GPT-5 bug-finding review via [Codex CLI](https://openai.com/codex).
+A [Claude Code](https://claude.ai/claude-code) skill that gates every code commit behind an automated Codex (GPT) bug-finding review via [Codex CLI](https://openai.com/codex).
 
 Codex reads your staged diff, finds bugs, applies fixes, and Claude reviews before committing. Loop until clean. Catches the bugs you'd miss — proven across real-world audits where it found 14 bugs in a single codebase that the primary AI missed.
 
 ## How it works
 
 ```
-You write code → stage changes → Codex (GPT-5.4) reviews in write mode
+You write code → stage changes → Codex (Codex.4) reviews in write mode
 → finds bugs + applies fixes → Claude reviews each fix → accepts/reverts
 → final read-only Codex pass confirms LGTM → commit
 ```
@@ -72,9 +72,9 @@ $ git commit -m "fix: ..."
 
 ## Background
 
-Built after two GPT-5.4 shadow audits on [Producer Player](https://github.com/EthanSK/producer-player) (April 2026) where Codex independently found 14 real bugs that Claude had missed — including a security vulnerability (custom protocol serving arbitrary files), silent data loss on import, and a listener-accumulation bug in the auto-updater. 11 of 14 findings were shipped as fixes immediately.
+Built after two Codex.4 shadow audits on [Producer Player](https://github.com/EthanSK/producer-player) (April 2026) where Codex independently found 14 real bugs that Claude had missed — including a security vulnerability (custom protocol serving arbitrary files), silent data loss on import, and a listener-accumulation bug in the auto-updater. 11 of 14 findings were shipped as fixes immediately.
 
-The conclusion: GPT-5 and Claude have complementary blind spots. Running both on every commit catches more bugs than either alone.
+The conclusion: Codex (GPT) and Claude have complementary blind spots. Running both on every commit catches more bugs than either alone.
 
 ## License
 

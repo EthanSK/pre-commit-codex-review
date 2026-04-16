@@ -1,13 +1,13 @@
 ---
 name: pre-commit-codex-review
-description: Before committing code changes on ANY project, run the staged diff through GPT-5 via Codex CLI (or OpenClaw fallback) for automated bug-finding and fixing. Codex writes fixes, Claude reviews. Loop until clean. Mandatory for all code commits — skip only for docs-only / config-only changes.
+description: Before committing code changes on ANY project, run the staged diff through Codex CLI (or OpenClaw fallback) for automated bug-finding and fixing. Codex writes fixes, Claude reviews. Loop until clean. Mandatory for all code commits — skip only for docs-only / config-only changes.
 ---
 
 # Pre-Commit Codex Review
 
 ## Why this exists
 
-GPT-5.4 consistently finds bugs that Claude misses — proven across two
+Codex (GPT-5.4) consistently finds bugs that Claude misses — proven across two
 shadow audits on Producer Player (2026-04-16) where it caught 14 real
 bugs, 11 shipped immediately. This skill gates every commit behind a
 GPT-5 review so those bugs never reach production.
