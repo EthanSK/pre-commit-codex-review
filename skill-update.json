@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/EthanSK/pre-commit-codex-review",
+  "branch": "main",
+  "path": ".",
+  "distribution": "git-or-copy"
+}
